@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WR3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/wbgl.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bolder" href="#"><i class="bi bi-globe2"></i> <strong>W B G L</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-calculator-fill"></i> Calculator
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="winrate1.html"><i class="bi bi-calculator"></i>
+                                    Winrate</a></li>
+                            <li><a class="dropdown-item" href="cvarte.html"><i class="bi bi-calculator"></i> Crit
+                                    Value</a></li>
+                            <li><a class="dropdown-item" href="damage.html"><i class="bi bi-calculator"></i> Damage</a>
+                            </li>
+                            <li><a class="dropdown-item" href="kda.html"><i class="bi bi-calculator"></i> Rasio KDA</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gamepedia.html"><i class="bi bi-controller"></i> GamePedia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html"><i class="bi bi-play-btn"></i> Trailer Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <div class="p-5 text-center rounded-3">
+            <h1 class="text-body-emphasis fw-bolder">Penghitungan Winrate Game</h1>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+                Tools yang membantu anda untuk menghitung winrate dari pertandingan dalam sebuah game atau yang lainnya.
+            </p>
+        </div>
+    </div>
+    <main>
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <br>
+                    <h2 class="fw-bolder">Hitung Winrate Pertandingan Menang</h2>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Total Game</label>
+                            <input type="number" class="form-control" id="totalGames" placeholder="Ex : 100" required>
+                            <div class="invalid-feedback">
+                                Masukkan total game.
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="nabe" class="form-label">Winrate Sekarang</label>
+                            <input type="number" class="form-control" id="currentWinRate" placeholder="Ex : 50"
+                                required>
+                            <div class="invalid-feedback">
+                                Masukkan winrate sekarang.
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Match Winstreak</label>
+                            <input type="number" class="form-control" id="desiredWinstreak" placeholder="Ex : 10"
+                                required>
+                            <div class="invalid-feedback">
+                                Masukkan match winstreak.
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="nabe" class="form-label fw-bolder">Hasil Winstreak</label>
+                            <input type="text" class="form-control" id="hasilwin" readonly>
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary fw-bold" onclick="wrnaik()">Hitung</button>
+                        <div class="d-flex flex-warp justify-content-center mb-3 border-bottom"></div>
+                        <a class="btn btn-outline-dark md-6 fw-bold text-info" href="winrate1.html" role="button">Hitung
+                            Winrate</a>
+                        <a class="btn btn-outline-dark md-6 fw-bold text-info" href="winrate2.html" role="button">Hitung
+                            Winrate Yang Diinginkan</a>
+                        <a class="btn btn-outline-dark md-6 fw-bold text-info" href="winrate4.html" role="button">Hitung
+                            Winrate Pertandingan Kalah</a>
+                        <a class="btn btn-outline-dark md-6 fw-bold text-info" href="winrate5.html" role="button">Hitung
+                            Total Menang Kalah</a>
+                        <a class="btn btn-outline-dark md-6 fw-bold text-info" href="kda.html" role="button">Hitung
+                            Rasio KDA</a>
+                        <a class="btn btn-outline-dark md-6 fw-bold text-info" href="damage.html" role="button">Hitung
+                            Damage</a>
+                        <a class="btn btn-outline-dark md-6 fw-bold text-info" href="cvarte.html" role="button">Hitung
+                            Crit Value (CV)</a>
+                        <div class="d-flex flex-warp justify-content-center py-2 border-bottom"></div>
+                        <br><br><br>
+                        <footer class="footer mt-auto">
+                            <div class="container">
+                                <p class="fw-bold">&copy; 2024 Website W B G L - Dibuat oleh Kelompok 10</p>
+                                <p class="fw-bold text-info">Follow us on :
+                                    <a href="https://github.com/peenjeee" target="_blank" class="text-white"><i
+                                            class="bi bi-github"></i></a>
+                                </p>
+                            </div>
+                        </footer>
+                        <script src="JS/wbgl.js">
+                        </script>
+</body>
+
+</html>
