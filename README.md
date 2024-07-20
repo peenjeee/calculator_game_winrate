@@ -1,6 +1,6 @@
 # Final Project Mata Kuliah Pengenalan Perancangan Web
 
-Kelompok 10 :
+Kelompok 10 (WibuGudLuking):
 
 - Panji Ihsanudin Fajri 23.12.2925
 - Marcellinus Afrits Sorongan  23.12.2966
